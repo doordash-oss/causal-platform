@@ -1,0 +1,10 @@
+version: '3'
+services:
+  causal-platform-lib:
+    image: causal-platform
+    build:
+      dockerfile: Dockerfile.dev
+      args:
+        - PIP_EXTRA_INDEX_URL
+    environment:
+      - ENVIRONMENT=local
