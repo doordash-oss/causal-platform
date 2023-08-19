@@ -1,0 +1,24 @@
+FROM 839591177169.dkr.ecr.us-west-2.amazonaws.com/open-source-mirror/dockerhub/python:3.8.11-buster
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    jq \
+    make \
+    git \
+    curl
+
+ENV LC_ALL=C.UTF-8 \
+    PY_IGNORE_IMPORTMISMATCH=1 \
+    POETRY_VERSION=1.2.0
+
+
+RUN git config --global --add safe.directory /causal-platform
+
+# Install poetry
+RUN pip install poetry==$POETRY_VERSION
+COPY . causal-platform/
+WORKDIR /causal-platform
+
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-interaction --no-ansi
+
