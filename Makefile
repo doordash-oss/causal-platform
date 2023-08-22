@@ -2,7 +2,6 @@ include _infra/infra*.mk
 
 .PHONY: docker-build
 docker-build guard-ARTIFACTORY_USERNAME guard-ARTIFACTORY_PASSWORD guard-PIP_EXTRA_INDEX_URL:
-	echo "${ARTIFACTORY_PASSWORD}" | docker login --username ${ARTIFACTORY_USERNAME} --password-stdin ddartifacts-docker.jfrog.io
 	docker build -t causal-platform-builder \
 		--build-arg ARTIFACTORY_USERNAME="$(subst @,%40,$(ARTIFACTORY_USERNAME))" \
 		--build-arg ARTIFACTORY_PASSWORD="$(subst {,%7B,$(ARTIFACTORY_PASSWORD))" \

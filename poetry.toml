@@ -1,6 +1,2 @@
 [virtualenvs]
 in-project = true
-
-[repositories]
-[repositories.artifactory-upload]
-url = "https://ddartifacts.jfrog.io/ddartifacts/api/pypi/pypi-local"

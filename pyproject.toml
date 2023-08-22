@@ -1,4 +1,5 @@
 [tool.poetry]
+authors = ["DoorDash"]
 description = "A Scalable Causal Inference Library"
 exclude = ["causal_platform/tests"]
 name = "causal-platform"
@@ -28,7 +29,7 @@ pyarrow = "^9.0.0"
 pytest = "7.1.3"
 pytest-cov = "3.0.0"
 pytest-mock = "3.8.2"
-setuptools = "^64.0.0"
+setuptools = "^65.5.1"
 snowflake-connector-python = "^2.7.12"
 twine = "4.0.1"
 mkdocs = "^1.4.2"
@@ -41,9 +42,6 @@ mkdocstrings-python = "^0.8.3"
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/doordash/causal_platform/issues"
 
-[[tool.poetry.source]]
-name = "artifactory"
-url = "https://ddartifacts.jfrog.io/ddartifacts/api/pypi/pypi-remote"
 
 [tool.black]
 exclude = '''
