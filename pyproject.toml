@@ -37,7 +37,7 @@ mkdocs-exclude = "^1.0.2"
 mkdocs-jupyter = "^0.22.0"
 mkdocs-mermaid2-plugin = "^0.6.0"
 mkdocstrings-python = "^0.8.3"
-cryptography = "^41.0.2"
+cryptography = "^41.0.4"
 
 
 [tool.poetry.urls]
