@@ -1,4 +1,4 @@
-FROM 839591177169.dkr.ecr.us-west-2.amazonaws.com/open-source-mirror/dockerhub/python:3.8.11-buster
+coverage.xmlhttps://orcid.org/0009-0003-0486-7218dc609f5a81044a37cbcaff92c7fc05fcef58c52a.devcontainer/devcontainer.json.devcontainerFROM 839591177169.dkr.ecr.us-west-2.amazonaws.com/open-source-mirror/dockerhub/python:3.8.11-buster
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
